@@ -1,0 +1,68 @@
+.github {
+  width: 70%;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  .github-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 400px;
+  }
+
+  .github-text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: right;
+
+    .github-text__par {
+      font-size: 1.5rem;
+      color: $blue-par;
+      text-align: center;
+    }
+
+    .github-text__btn {
+      padding: 1rem 3rem;
+      border-radius: 0.5rem;
+      background-color: $blue-dark;
+      outline: none;
+      border: none;
+      margin-top: 1rem;
+      a {
+        color: $light-color;
+        font-family: vazir;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .github-text {
+    width: 100% !important;
+  }
+}
+
+////////++++ dark mode ++++////////
+
+// github
+.dark .github-text .github-text__par {
+  color: $light-box !important;
+}
+
+.dark .github-text .github-text__btn {
+  background-color: $light-box;
+  a {
+    color: $blue-dark;
+  }
+}

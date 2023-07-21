@@ -1,0 +1,26 @@
+//Reset CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+body {
+  font-family: $font-family-vazir;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $blue-dark;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}

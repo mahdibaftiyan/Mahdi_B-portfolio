@@ -1,0 +1,50 @@
+.container {
+  width: 90%;
+  padding: 1rem 1.5rem;
+  margin: 0 auto;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.shadow {
+  box-shadow: 0 0 5px 5px rgba($color: #000000, $alpha: 0.06);
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+
+// Padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+// Margin
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}

@@ -1,0 +1,41 @@
+@import "fonts";
+@import "variables";
+@import "function";
+@import "reset";
+@import "util";
+
+// header sections
+@import "section/header";
+// main sections
+@import "section/main";
+
+// portfolio sections
+@import "section/portfolio";
+
+// github section
+@import "section/github";
+
+// contact section
+@import "section/contact";
+
+footer {
+  width: 100%;
+  display: flex;
+  padding: 1rem 4rem;
+  font-size: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-code;
+  color: $light-box;
+  border-top: 2px solid $blue-dark;
+}
+.dark footer {
+  border: none;
+}
+
+// background
+@import "section/background";
+
+.dark {
+  @include transition(all, 4s);
+}

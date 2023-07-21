@@ -1,0 +1,44 @@
+.css-right {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  transform: translate(40%, 40%);
+  width: 2000px;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.css-left {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  transform: translate(-50%, -20%);
+  opacity: 0.5;
+  max-width: 500px;
+  z-index: -1;
+}
+
+@media screen and (min-width: 62em) {
+  .css-right {
+    width: 5000px;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .css-right {
+    width: 5000px;
+  }
+}
+@media screen and (min-width: 30em) {
+  .css-right {
+    width: 2000px;
+  }
+}
+
+.dark .css-left {
+  position: fixed;
+  top: 100px;
+  left: 0px;
+  transform: translate(-40%, -40%);
+  width: 4000px !important;
+}

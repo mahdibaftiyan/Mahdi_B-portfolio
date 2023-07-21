@@ -1,0 +1,82 @@
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: $blue-dark;
+  border: 3px solid $light-color;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.par-desc {
+  padding: 1rem;
+  font-size: 1rem;
+  color: $blue-par;
+  text-align: center;
+}
+
+.portfolio {
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 33, 33333%;
+
+  .cart-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .img-container {
+      width: 368px;
+      height: 300px;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: all 0.7s;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    span {
+      margin: 1rem 0;
+      font-size: 1.3rem;
+      color: $blue-text;
+    }
+    &:hover .img-container {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+.bg-color {
+  padding: 3rem 0;
+}
+////////++++ dark mode ++++////////
+
+// portfolio
+.dark .title {
+  color: $light-color !important;
+  border-color: $arrow-code !important;
+}
+
+.dark .par-desc {
+  color: $light-color;
+}
+
+.dark .bg-color {
+  background-color: #000;
+}
+
+.dark .card span {
+  color: $light-box !important;
+}

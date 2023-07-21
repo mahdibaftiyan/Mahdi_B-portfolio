@@ -1,0 +1,48 @@
+.contact-me {
+  width: 70%;
+  margin: 5rem auto;
+  padding: 2rem;
+  text-align: center;
+
+  .contact-title {
+    color: $blue-dark;
+  }
+
+  .contact-link-container {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .contact-linke {
+    min-width: 300px;
+    background-color: $light-color;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: $blue-dark;
+    border: 2px solid $blue-dark;
+    cursor: pointer;
+    transition: all 0.7s;
+    &:hover {
+      background-color: $blue-dark;
+      color: $light-color;
+    }
+  }
+}
+
+////////++++ dark mode ++++////////
+
+// contact
+.dark .contact-title {
+  color: $light-color !important;
+}
+.dark .contact-linke {
+  background-color: $darken !important;
+  color: $light-box;
+  border-color: $arrow-code;
+  &:hover {
+    background-color: $arrow-code !important;
+    color: $darken;
+  }
+}

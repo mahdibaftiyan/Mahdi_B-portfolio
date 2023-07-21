@@ -1,0 +1,304 @@
+.main {
+  padding-top: 3rem;
+  position: relative;
+  // first section intro
+  .introduce {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    // max-height: 800px;
+
+    .intro {
+      max-height: 100%;
+      margin-top: 1rem;
+      padding: 1rem;
+      text-align: right;
+      direction: rtl;
+
+      .intro__title {
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: $blue-dark;
+        background-color: $light-color;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        width: fit-content;
+      }
+
+      .img-container {
+        width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+
+      .intro-par {
+        padding: 1rem;
+        font-size: 1rem;
+        color: $blue-par;
+      }
+    }
+
+    .small-image {
+      height: 730px;
+      .img-container {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        cursor: pointer;
+      }
+    }
+
+    .about {
+      border-bottom: 2px solid $blue-dark;
+    }
+
+    .skills {
+      margin-top: 3rem;
+
+      .intro-par {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .badge {
+        padding: 0.5rem 1rem;
+        background-color: $skills-color;
+        color: $light-box;
+        border-radius: 0.5rem;
+        margin: 0.4rem;
+      }
+    }
+  }
+
+  .bg-pattren {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include background-main();
+  }
+}
+
+// codes
+.code-animation {
+  background-color: $bg-code;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  @include transition(all, 1s);
+  overscroll-behavior: contain;
+
+  &:hover {
+    box-shadow: 0px 0px 6px 6px rgba($color: #000000, $alpha: 0.4);
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.3rem 0 0.7rem 0;
+    border-bottom: 1px solid $line-code;
+
+    span {
+      cursor: pointer;
+      width: 13px;
+      height: 13px;
+      background-color: $light-box;
+      border-radius: 50%;
+      & + span {
+        margin-left: 0.3rem;
+      }
+    }
+  }
+
+  code {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overscroll-behavior: contain;
+
+    .line {
+      margin: 0.5rem 0;
+      display: flex;
+      overflow: hidden;
+      border-right: 0.15em solid transparent;
+      width: 0%;
+      height: 20px;
+      font-size: 1rem;
+      font-family: "Source Code Pro", monospace;
+    }
+    .line-count {
+      display: inline-block;
+      margin-right: 3rem;
+      color: $line-code;
+      font-size: 1rem;
+    }
+    .line-count-html {
+      display: inline-block;
+      margin-right: 2rem;
+      color: $line-code;
+      font-size: 1rem;
+    }
+
+    .code-arrow {
+      color: $arrow-code;
+    }
+    .code-tag {
+      color: $tag-code;
+    }
+    .code-text {
+      color: $text-code;
+    }
+  }
+  //   , blink-caret 1s step-end infinite
+
+  .line:nth-child(1) {
+    animation: typing 5s;
+    animation-fill-mode: forwards;
+  }
+  .line:nth-child(2) {
+    animation: typing 6s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+  }
+  .line:nth-child(3) {
+    animation: typing 7s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.4s;
+  }
+  .line:nth-child(4) {
+    animation: typing 8s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+  }
+  .line:nth-child(5) {
+    animation: typing 10s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+  }
+  .line:nth-child(6) {
+    animation: typing 15s;
+    animation-fill-mode: forwards;
+    animation-delay: 12.5s;
+  }
+  .line:nth-child(7) {
+    animation: typing 15s;
+    animation-fill-mode: forwards;
+    animation-delay: 17.5s;
+  }
+  .line:nth-child(8) {
+    animation: typing 15s;
+    animation-fill-mode: forwards;
+    animation-delay: 24s;
+  }
+  .line:nth-child(9) {
+    animation: typing 15s;
+    animation-fill-mode: forwards;
+    animation-delay: 26.5s;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  .introduce {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .intro-coustom {
+    grid-column: 1 /3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .skills {
+    width: 45%;
+    margin-top: 0 !important;
+  }
+  .about {
+    width: 45%;
+    border-bottom: none !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .introduce {
+    grid-template-columns: 1fr !important;
+  }
+  .small-image {
+    grid-column: 1 /-1;
+    height: fit-content !important;
+    margin-bottom: 2rem;
+  }
+
+  .big-image {
+    grid-column: 1 /-1;
+    margin: 0;
+    height: 600px;
+  }
+  .intro-coustom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .skills {
+    width: 100%;
+    margin-top: 3rem !important;
+  }
+  .about {
+    width: 100%;
+    margin-top: 0 !important;
+    border-bottom: none !important;
+  }
+}
+
+////////++++ dark mode ++++////////
+
+// main
+
+.dark .intro__title {
+  color: $light-color !important;
+  background-color: $blue-dark !important;
+}
+
+.dark .intro-par {
+  color: $light-box !important;
+}
+
+.dark .about {
+  border-bottom: 2px solid $blue-dark;
+}
+
+.dark .skills .badge {
+  background-color: $light-box !important;
+  color: $skills-color !important;
+}
+
+.dark .bg-pattren {
+  @include background-main__dark-mode();
+}
+
+.dark .code-animation:hover {
+  box-shadow: 0px 0px 6px 6px rgba($color: #fff, $alpha: 0.2) !important;
+}

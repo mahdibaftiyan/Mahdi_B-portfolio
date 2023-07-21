@@ -1,0 +1,111 @@
+// main header
+#main-header {
+  // container custome style
+  .container {
+    @include flex(space-between);
+    font-size: 1.3rem;
+  }
+
+  //   them container
+  .them {
+    position: relative;
+    cursor: pointer;
+
+    // switch
+    .switch-them {
+      font-size: 1.5rem;
+      position: absolute;
+      top: 1.8rem;
+      left: 50%;
+      display: none;
+      padding: 0.3rem;
+      border-radius: 0.5rem;
+      background-color: $light-box;
+      color: $blue-dark;
+      transform: translateX(-50%);
+      z-index: 2;
+
+      //   text them
+      span {
+        text-align: center;
+        display: block;
+        font-size: 1rem;
+        margin: 0.2rem 0;
+        padding: 0.5rem 2rem;
+        border-radius: 0.5rem;
+        &:hover {
+          background-color: $blue-dark;
+          color: $light-box;
+        }
+      }
+    }
+
+    &:hover .switch-them {
+      display: block;
+    }
+  }
+
+  .container-text {
+    color: $blue-dark;
+  }
+
+  .git-link a {
+    color: $blue-dark;
+    font-size: 1.5rem;
+  }
+
+  @include transition(background, 1.2s);
+}
+
+.display-b{
+  display: block !important;
+}
+
+// scroll
+.header-scroll {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-fixed {
+  width: 100% !important;
+  position: fixed !important;
+  top: 0;
+  z-index: 1000;
+}
+
+
+////////++++ dark mode ++++////////
+
+// header 
+.dark #main-header {
+  background-color: $bg-code;
+}
+
+.dark .header-scroll {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .switch-them {
+  background-color: $bg-code !important;
+  color: $light-box !important;
+
+  span {
+    &:hover {
+      background-color: $blue-color !important;
+      color: $light-box !important;
+    }
+  }
+}
+
+.dark .container-text {
+  color: $light-box !important;
+}
+
+.dark .git-link a  , .dark .container-text , .dark .them i {
+  color: $light-box !important;
+}
+// end header
